@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revista Virtual - Escola</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+
+<style>
+/* ======== CABEÇALHO ======== */
+header {
+    background: radial-gradient(rgb(1, 1, 34), 65%, rgb(19, 5, 220) 100%);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;    
+    padding: 10px;
+}
+header img {
+    max-height: 80px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+header h1 {
+    display: inline-block;
+    font-size: 1.8rem;
+    vertical-align: middle;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    background: rgb(9, 2, 112);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+footer a {
+    color: #ffca28;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ======== PÁGINA DE FUNDO ======== */
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(fundo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+/* ======== CONTEÚDO PRINCIPAL ======== */
+.caixa {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid black;
+    padding: 30px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.caixatx {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
+    gap: 20px;
+    justify-content: center;
+}
+
+.caixaft {
+    display: flex;
+    flex-wrap: wrap; /* imagens se ajustam ao tamanho da tela */
+    justify-content: center;
+    gap: 15px;
+}
+
+.h11 {
+    color: rgb(7, 50, 2);
+    text-align: center;
+    font-family: 'Rubik Vinyl', Courier;
+    font-size: 40px;
+}
+
+.img1 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.p1 {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    text-align: justify;
+    text-indent: 60px;
+    font-size: 17px;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Rubik Vinyl', Courier;
+    font-size: 30px;
+    color: rgb(7, 50, 2);
+}
+
+h4 {
+    font-family: 'Rubik Vinyl', Courier;
+    font-size: 20px;
+    color: black;
+}
+
+h5 {
+    text-align: right;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 17px;
+}
+
+li {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    text-align: justify;
+    font-size: 18px;            
+}
+
+hr {
+    height: 5px;
+    width: 90%;
+    background-color: rgb(7, 50, 2);
+    border: none;
+}
+
+/* ======== AJUSTES RESPONSIVOS ======== */
+@media (max-width: 900px) {
+    header h1 {
+        display: block;
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    header img {
+        max-height: 60px;
+        margin-right: 0;
+    }
+
+    .caixatx {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img1 {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .p1 {
+        font-size: 16px;
+        text-indent: 40px;
+    }
+
+    .caixaft img {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .h11 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .p1 {
+        font-size: 15px;
+        text-indent: 30px;
+    }
+
+    .caixaft img {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div id="conteudo">
+    <header>
+        <img src="../Logo.png" alt="Logo da Escola">
+        <h1>Li no Villachá</h1>
+    </header>
+
+    <div class="caixa">
+        <h1 class="h11">CR7</h1>
+        <h5>Autores: Murilo, Samuel, João Vitor, Luan e Raul.</h5>
+
+        <div class="caixatx">
+            <img class="img1" src="foto1.jpg" alt="Cristiano Ronaldo" width="600" height="400">
+            <div>
+                <p class="p1">Cristiano Ronaldo dos Santos Aveiro nasceu na cidade de Funchal, na Ilha da Madeira, Portugal, no dia 05 de fevereiro de 1985. Filho caçula do jardineiro José Diniz Pereira Aveiro e da cozinheira Maria Dolores dos Santos Aveiro, quando criança passava a maior parte de seu dia jogando bola na rua com os amigos.</p>
+                <p class="p1">No dia 14 de abril de 1997, Cristiano Ronaldo fez o teste no Sporting Lisboa e, com apenas 11 anos, entrou para as categorias de base do clube, onde jogou no Sub 16, Sub 17 e no Sub 18.</p>
+                <p class="p1">Em 2003, Cristiano Ronaldo chamou a atenção do técnico do Manchester United, da Inglaterra. Foi contratado para substituir o jogador David Beckham, que havia sido contratado pelo Real Madrid, da Espanha.</p>
+                <p class="p1">No ano de 2008, depois de muitas especulações, Cristiano Ronaldo foi para o Real Madrid e participou da temporada 2009-2010. Sua contratação foi a mais cara do clube, que tinha outros jogadores de destaque mundial como Kaká, Zidane, Ronaldo e Roberto Carlos, que fizeram parte da primeira fase das grandes estrelas do time espanhol, conhecidos como os Intergalácticos.</p>
+            </div>
+        </div>
+
+        <h3>Conquistas</h3>
+
+        <h4>Sporting</h4>
+        <ul>
+            <li>Supertaça de Portugal 2002</li>
+        </ul>
+
+        <h4>Manchester United</h4>
+        <ul>
+            <li>Copa da Inglaterra 2003-2004, 2007-2008</li>
+            <li>Copa da Liga Inglesa 2005-2006</li>
+            <li>Campeonato Inglês 2006-07, 2007-08</li>
+            <li>Liga dos Campeões da Europa 2007-2008</li>
+        </ul>
+
+        <h4>Real Madrid</h4>
+        <ul>
+            <li>Campeonato do Mundo de Clubes da FIFA: 2014, 2016, 2017</li>
+            <li>Supercopa da UEFA: 2014, 2017</li>
+            <li>Campeonato Espanhol: 2011–12, 2016–17</li>
+            <li>Copa do Rei: 2010–11, 2013–14</li>
+            <li>Supercopa da Espanha: 2012, 2017</li>
+        </ul>
+
+        <h4>Juventus</h4>
+        <ul>
+            <li>Supercopa da Itália 2018</li>
+            <li>Campeonato Italiano 2018/19</li>
+            <li>Campeonato Italiano 2019/20</li>
+        </ul>
+
+        <h4>Prêmios individuais</h4>
+        <ul>
+            <li>Bola de Ouro da Fifa 2013-2014</li>
+            <li>Homem do jogo da Supercopa da UEFA 2014</li>
+            <li>Melhor Jogador da UEFA 2013-14, 2015-16 e 2016-17</li>
+            <li>Bola de Ouro da UEFA 2007-08, 2010-11, 2013-14, 2014-15</li>
+            <li>Bola de Ouro do Campeonato do Mundo de Clubes 2016</li>
+            <li>Futebolista do Ano em Portugal 2007, 08, 09, 11, 12, 13, 15, 16, 17 e 18</li>
+            <li>Melhor jogador do mundo pela ESPY Awards 2018</li>
+            <li>Chuteira de Ouro da revista France Football</li>
+        </ul>
+
+        <hr>
+
+        <div class="caixaft">
+            <img src="foto2.jpg" alt="CR7 em campo" width="400" height="300">
+            <img src="cris.jpg" alt="Cristiano Ronaldo comemorando" width="400" height="300">
+            <img src="foto3.jpg" alt="Cristiano Ronaldo em treino" width="400" height="300">
+        </div>
+
+        <hr>
+    </div>
+
+    <footer>
+        <p>E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
+    </footer>
+</div>
+</body>
+</html>
