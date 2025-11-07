@@ -127,30 +127,6 @@ ul, li {
     height: auto;
 }
 
-/* ======== BOTÃO VOLTAR ======== */
-.voltar-container {
-    text-align: center;
-    margin: 20px 0;
-    display: none; /* escondido por padrão (desktop) */
-}
-
-.botao-voltar {
-    display: inline-block;
-    background-color: rgb(9, 2, 112);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease;
-}
-
-.botao-voltar:hover {
-    background-color: rgb(19, 5, 220);
-}
-
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 768px) {
     header {
@@ -212,11 +188,6 @@ ul, li {
         font-size: 14px;
         padding: 10px;
     }
-
-    /* Exibir botão "Voltar" apenas em telas pequenas */
-    .voltar-container {
-        display: block;
-    }
 }
 </style>
 </head>
@@ -271,16 +242,7 @@ ul, li {
     </div>
 </div>
 
-<h4>Fonte: 
-    <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2023/03/tragica-historia-no-guaruja-e-retratada-em-novo-episodio-da-campanha-brasil-contra-fake">
-        gov.br/secom
-    </a>
-</h4>
-
-<!-- ======== BOTÃO VOLTAR (visível apenas em telas pequenas) ======== -->
-<div class="voltar-container">
-    <a href="index.html" class="botao-voltar">⬅ Voltar para a Página Inicial</a>
-</div>
+<h4>Fonte: <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2023/03/tragica-historia-no-guaruja-e-retratada-em-novo-episodio-da-campanha-brasil-contra-fake">gov.br/secom</a></h4>
 
 <!-------- RODAPÉ -------->
 <footer>
@@ -290,6 +252,5 @@ ul, li {
 </div>
 </body>
 </html>
-
 
 
