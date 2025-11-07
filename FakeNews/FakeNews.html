@@ -19,7 +19,7 @@ header {
 header .logo-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;         /* evita quebra de linha entre logo e título */
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     gap: 16px;
@@ -30,7 +30,7 @@ header img {
     max-height: 80px;
     width: auto;
     display: block;
-    flex: 0 0 auto;           /* não encolhe além do necessário */
+    flex: 0 0 auto;
 }
 header h1 {
     font-size: 1.8rem;
@@ -38,7 +38,7 @@ header h1 {
     font-weight: 600;
     letter-spacing: 1px;
     line-height: 1;
-    white-space: nowrap;      /* impede quebra do texto do título */
+    white-space: nowrap;
 }
 
 /* ======== RODAPÉ ======== */
@@ -99,25 +99,20 @@ ul, li { list-style: none; padding: 5px; text-align: justify; font-size: 20px; }
 
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 768px) {
-    /* cabeçalho: mantém logo e texto lado a lado */
     header { padding: 10px 8px; }
     header .logo-container {
         gap: 8px;
         justify-content: center;
     }
     header img {
-        max-height: 48px;      /* reduz a altura da logo no celular */
+        max-height: 48px;
         flex: 0 0 auto;
     }
     header h1 {
-        font-size: 1.15rem;    /* reduz o tamanho do título para caber na mesma linha */
-        white-space: nowrap;   /* evita quebra de linha */
-        overflow: hidden;
-        text-overflow: ellipsis; /* se faltar espaço, texto terá reticências */
-        max-width: calc(100% - 70px); /* previne que o título ocupe todo o espaço da linha */
+        font-size: 1.25rem;
+        white-space: nowrap; /* mantém o texto na mesma linha */
     }
 
-    /* outros ajustes mobile */
     .h11 { font-size: 26px; padding: 0 10px; }
     h2 { font-size: 24px; padding: 0 10px; }
     .p1 { font-size: 18px; text-indent: 25px; padding: 0 10px; }
@@ -125,7 +120,6 @@ ul, li { list-style: none; padding: 5px; text-align: justify; font-size: 20px; }
     ul, li { font-size: 18px; padding: 0 10px; }
     h4 { text-align: center; font-size: 16px; padding: 0 10px; word-wrap: break-word; }
 
-    /* conteúdo principal empilha (imagens acima do texto) */
     .caixa { flex-direction: column; align-items: center; text-align: justify; }
     .caixa img { width: 100%; max-width: 350px; margin: 0 auto 15px auto; display: block; }
     footer { font-size: 14px; padding: 10px; }
@@ -134,7 +128,7 @@ ul, li { list-style: none; padding: 5px; text-align: justify; font-size: 20px; }
 </head>
 
 <body>
-<!-- CABEÇALHO -->
+<!-------- CONTEÚDO CABEÇALHO -------->
 <header>
     <div class="logo-container">
         <img src="../Logo.png" alt="Logo da Escola">
@@ -142,46 +136,55 @@ ul, li { list-style: none; padding: 5px; text-align: justify; font-size: 20px; }
     </div>
 </header>
 
-<!-- CONTEÚDO -->
+<!-------- CONTEÚDO PÁGINA -------->    
 <div id="conteudo" class="centralizado">
-    <h1 class="h11">Combate às Fake News: luta contra a desinformação e pela educação para a mídia</h1>
-    <p class="p2">Autores: Dhiogo, Thayna e Giulie</p>
 
-    <div class="caixa">
-        <img src="cg.png" width="325" alt="Imagem Fake News">
-        <p class="p1">O combate a fake news e à desinformação ... (seu texto aqui)</p>
+<h1 class="h11">Combate às Fake News: luta contra a desinformação e pela educação para a mídia</h1>
+<p class="p2">Autores: Dhiogo, Thayna e Giulie</p>
+
+<div class="caixa">
+    <img src="cg.png" width="325" alt="Imagem Fake News">
+    <p class="p1">
+        O combate a fake news e à desinformação passa fundamentalmente pela educação midiática, que desenvolve a capacidade crítica para interpretar e avaliar informações, transformando cidadãos em consumidores e produtores de mídia mais conscientes e autônomos. Essa abordagem, aliada a iniciativas de empresas de comunicação, plataformas digitais, órgãos públicos e do jornalismo profissional, que buscam a verdade e a qualidade da informação, forma um combate em rede, necessário para enfrentar a complexidade do problema e sua amplificação pelas redes sociais.
+    </p>
+</div>
+
+<div class="caixatx">
+<h2>O que é Educação Midiática?</h2> 
+<ul>
+    <li><b>Desenvolvimento de habilidades críticas:</b> Ajuda a desenvolver habilidades como duvidar, elaborar hipóteses e investigar, essenciais para analisar informações digitais.</li>     
+    <li><b>Compreensão do consumo de mídia:</b> Permite que jovens e adultos entendam melhor o funcionamento das redes sociais e diminuam os riscos de serem enganados ou de enganar outros.</li>
+    <li><b>Criação e participação ativa:</b> Capacita as pessoas a se tornarem produtoras de mídia com autonomia, não apenas consumidoras passivas.</li>
+</ul>
+
+<h2>Como combater a desinformação:</h2>
+<ul>
+    <li><b>Ações em rede:</b> A luta contra a desinformação deve ser uma ação coordenada de todos os setores da sociedade, como empresas, órgãos públicos e cidadãos.</li>
+    <li><b>Fortalecimento do jornalismo:</b> O jornalismo profissional é considerado um dos principais antídotos contra as fake news, buscando sempre levar informações corretas à população.</li>
+    <li><b>Inclusão na educação:</b> A inclusão da educação midiática na BNCC é fundamental para abordar questões do século XXI em sala de aula.</li>
+    <li><b>Ferramentas e recursos:</b> Existem cursos, vídeos, memes e textos para auxiliar na educação midiática de forma acessível e didática.</li>
+    <li><b>Verificação de informações:</b> Conferir a fonte, ler a notícia completa e desconfiar de narrativas sensacionalistas são práticas essenciais no dia a dia.</li>
+</ul>
+</div>
+
+<h2>Trágica história no Guarujá é retratada em novo episódio da campanha Brasil contra Fake</h2>
+
+<div class="caixa">
+    <img src="fab.jpg" alt="Fabiane Maria de Jesus" width="400">
+    <div>
+        <p class="p1">O depoimento real é de Yasmin de Jesus, de 21 anos. A mãe dela, Fabiane Maria de Jesus, foi vítima de uma notícia falsa postada em maio de 2014 no Facebook. O post viralizou e no dia 5 de maio daquele ano ela foi confundida com uma suposta sequestradora de crianças para rituais de magia negra.</p>
+        <p class="p1">Fabiane, que havia saído de casa no Bairro Morrinhos, no Guarujá (SP), para ir à igreja, foi amarrada e agredida por uma multidão. Ela ainda foi levada ao hospital, mas não resistiu aos ferimentos e morreu dois dias depois. Foi o primeiro caso de fake news que resultou em morte no Brasil.</p>
     </div>
+</div>
 
-    <div class="caixatx">
-        <h2>O que é Educação Midiática?</h2>
-        <ul>
-            <li><b>Desenvolvimento de habilidades críticas:</b> ...</li>
-            <li><b>Compreensão do consumo de mídia:</b> ...</li>
-            <li><b>Criação e participação ativa:</b> ...</li>
-        </ul>
+<h4>Fonte: <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2023/03/tragica-historia-no-guaruja-e-retratada-em-novo-episodio-da-campanha-brasil-contra-fake">gov.br/secom</a></h4>
 
-        <h2>Como combater a desinformação:</h2>
-        <ul>
-            <li><b>Ações em rede:</b> ...</li>
-            <li><b>Fortalecimento do jornalismo:</b> ...</li>
-            <li><b>Inclusão na educação:</b> ...</li>
-        </ul>
-    </div>
+<!-------- RODAPÉ -------->
+<footer>
+   <p>E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
+</footer>
 
-    <h2>Trágica história no Guarujá é retratada em novo episódio da campanha Brasil contra Fake</h2>
-    <div class="caixa">
-        <img src="fab.jpg" alt="Fabiane Maria de Jesus" width="400">
-        <div>
-            <p class="p1">O depoimento real é de Yasmin de Jesus, de 21 anos...</p>
-            <p class="p1">Fabiane, que havia saído de casa ...</p>
-        </div>
-    </div>
-
-    <h4>Fonte: <a href="https://www.gov.br/secom/pt-br/assuntos/noticias/2023/03/tragica-historia-no-guaruja-e-retratada-em-novo-episodio-da-campanha-brasil-contra-fake">gov.br/secom</a></h4>
-
-    <footer>
-       <p>E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
-    </footer>
 </div>
 </body>
 </html>
+
