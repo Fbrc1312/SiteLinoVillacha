@@ -9,364 +9,323 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background-color: #bab5b5ce;
-    color: #333;
-}
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background-color: #bab5b5ce;
+        color: #333;
+    }
 
-/* ====== CABEÇALHO ====== */
-header {
-    background: radial-gradient(rgb(1, 1, 34), 65%, rgb(19, 5, 220) 100%);
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 10px;
-    position: relative;
-}
+    /* ====== CABEÇALHO ====== */
+    header {
+        background: radial-gradient(rgb(1, 1, 34), 65%, rgb(19, 5, 220) 100%);
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+    }
 
-header img {
-    max-height: 80px;
-    margin-right: 15px;
-}
+    header .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
 
-header h1 {
-    font-size: 1.8rem;
-    margin: 0;
-    font-weight: 600;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-/* ====== BOTÃO HAMBÚRGUER ====== */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 28px;
-    height: 25px;
-    z-index: 20;
-}
-
-.menu-toggle span {
-    height: 3px;
-    width: 100%;
-    background: white;
-    margin: 4px 0;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-/* ====== NAVEGAÇÃO ====== */
-.navbar {
-    background-color: #0606061a;
-    padding: 10px 0;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.navbar ul li {
-    margin: 5px 20px;
-}
-
-.navbar ul li a {
-    color: rgb(7, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: #ff9800;
-}
-
-/* ====== CONTEÚDO ====== */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.box {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.box img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    z-index: 0;
-}
-
-.box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
-    z-index: 1;
-}
-
-.box p {
-    position: relative;
-    z-index: 2;
-    padding: 15px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin: 0;
-    text-align: center;
-}
-
-.box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-.box:hover img {
-    transform: scale(1.05);
-}
-
-/* ====== RODAPÉ ====== */
-footer {
-    background: rgb(9, 2, 112);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: #ffca28;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 500;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* ====== RESPONSIVIDADE ====== */
-@media (max-width: 768px) {
     header img {
-        max-height: 60px;
+        max-height: 80px;
+        vertical-align: middle;
     }
 
     header h1 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
+        margin: 0;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
 
-    /* Mostrar botão hamburguer */
-    .menu-toggle {
-        display: flex;
-    }
-
-    /* Esconder menu padrão */
+    /* ====== MENU ====== */
     .navbar {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(1, 1, 34, 0.95);
-        text-align: center;
-        z-index: 10;
+        background-color: #0606061a;
+        padding: 10px 0;
     }
 
     .navbar ul {
-        flex-direction: column;
-        padding: 15px 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
     }
 
     .navbar ul li {
-        margin: 10px 0;
+        margin: 2px 70px;
     }
 
     .navbar ul li a {
-        color: white;
-        font-size: 1.1rem;
+        color: rgb(7, 0, 0);
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        transition: color 0.3s;
     }
 
-    /* Quando ativo */
-    .navbar.active {
-        display: block;
-        animation: fadeIn 0.3s ease;
+    .navbar ul li a:hover {
+        color: #ff9800;
     }
 
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
+    /* ====== MENU HAMBÚRGUER ====== */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 11;
     }
 
-    /* Animação do botão */
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translateY(8px);
+    .menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background: white;
+        margin: 4px 0;
+        transition: 0.3s;
     }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translateY(-8px);
-    }
-}
 
-@media (max-width: 480px) {
-    header img {
-        max-height: 45px;
+    /* ====== CONTEÚDO ====== */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        padding: 30px;
+        max-width: 1200px;
+        margin: auto;
     }
-    header h1 {
-        font-size: 1.1rem;
-    }
+
     .box {
-        height: 180px;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        height: 250px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
     }
+
+    .box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+        z-index: 0;
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+        z-index: 1;
+    }
+
     .box p {
-        font-size: 0.85rem;
+        position: relative;
+        z-index: 2;
+        padding: 15px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0;
+        text-align: center;
     }
-}
+
+    .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .box:hover img {
+        transform: scale(1.05);
+    }
+
+    /* ====== RODAPÉ ====== */
+    footer {
+        background: rgb(9, 2, 112);
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    footer a {
+        color: #ffca28;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: 500;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* ====== RESPONSIVIDADE ====== */
+    @media (max-width: 768px) {
+        header .header-content {
+            justify-content: center;
+            flex-wrap: nowrap;
+        }
+
+        header img {
+            max-height: 60px;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+
+        .navbar {
+            display: none;
+            position: absolute;
+            top: 100%; /* colado ao cabeçalho */
+            left: 0;
+            width: 100%;
+            background: rgba(1, 1, 34, 0.97);
+            text-align: center;
+            z-index: 10;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul {
+            flex-direction: column;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            margin: 10px 0;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .navbar.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-8px);
+        }
+    }
 </style>
 </head>
 <body>
 
-<!-- CONTEÚDO PRINCIPAL -->
-<div id="conteudo">
-
-    <header>
-        <!-- Botão do menu hamburguer -->
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <img src="Logo.png" alt="Logo">
-        <h1>E. E. Lino Villachá</h1>
-    </header>
-
-    <!-- MENU DE NAVEGAÇÃO -->
-    <nav class="navbar" id="navbar">
-        <ul>
-            <li><a href="escola.html">SOBRE A ESCOLA</a></li>
-            <li><a href="avisos.html">AVISOS IMPORTANTES</a></li>
-            <li><a href="fotos.html">FOTOS</a></li>
-            <li><a href="contato.html">CONTATOS</a></li>
-        </ul>
-    </nav>
-
-    <!-- CONTEÚDO -->
-    <div class="container">
-        <a href="LinoVillacha/Lino.html" class="box" target="_blank">
-            <img src="LinoVillacha/FT1.jpg" alt="Imagem não encontrada!">
-            <p>Quem foi Lino Villachá?</p>
-        </a>
-
-        <a href="Lara/Lara.html" class="box" target="_blank">
-            <img src="Lara/inclusivo.jpg" alt="Imagem não encontrada!">
-            <p>Que país é este?</p>
-        </a>
-
-        <a href="IdadeMedia/IdadeMedia.html" class="box" target="_blank">
-            <img src="IdadeMedia/capa.jpg.jfif" alt="Imagem não encontrada!">
-            <p>Costumes da Idade Média</p>
-        </a>
-
-        <a href="GAP/GAP.html" class="box" target="_blank">
-            <img src="GAP/capa.jpg" alt="Imagem não encontrada!">
-            <p>Entre bons genes e jeans para todos</p>
-        </a>
-
-        <a href="FakeNews/FakeNews.html" class="box" target="_blank">
-            <img src="FakeNews/images.jfif" alt="Imagem não encontrada!">
-            <p>Fake News</p>
-        </a>
-
-        <a href="RedesSociais/RedesSociais.html" class="box" target="_blank">
-            <img src="RedesSociais/fotojpg.jfif" alt="Imagem não encontrada!">
-            <p>Impacto das redes sociais</p>
-        </a>
-
-        <a href="CR7/CR7.html" class="box" target="_blank">
-            <img src="CR7/papaicris.jpg" alt="Imagem não encontrada!">
-            <p>CR7</p>
-        </a>
-
-        <a href="reportagem8.html" class="box" target="_blank">
-            <img src="imagem8.jpg" alt="Reportagem 8">
-            <p>Título 8</p>
-        </a>
-
-        <a href="reportagem9.html" class="box" target="_blank">
-            <img src="imagem9.jpg" alt="Reportagem 9">
-            <p>Título 9</p>
-        </a>
-
-        <a href="reportagem10.html" class="box" target="_blank">
-            <img src="imagem10.jpg" alt="Reportagem 10">
-            <p>Título 10</p>
-        </a>
-
-        <a href="reportagem11.html" class="box" target="_blank">
-            <img src="imagem11.jpg" alt="Reportagem 11">
-            <p>Título 11</p>
-        </a>
-
-        <a href="reportagem12.html" class="box" target="_blank">
-            <img src="imagem12.jpg" alt="Reportagem 12">
-            <p>Título 12</p>
-        </a>
+<header>
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <footer>
-        <p>E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
-    </footer>
+    <div class="header-content">
+        <img src="Logo.png" alt="Logo">
+        <h1>Li no Villachá</h1>
+    </div>
+</header>
+
+<nav class="navbar" id="navbar">
+  <ul>
+    <li><a href="escola.html">SOBRE A ESCOLA</a></li>
+    <li><a href="avisos.html">AVISOS IMPORTANTES</a></li>
+    <li><a href="fotos.html">FOTOS</a></li>
+    <li><a href="contato.html">CONTATOS</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+    <a href="LinoVillacha/Lino.html" class="box" target="_blank">
+        <img src="LinoVillacha/FT1.jpg" alt="Imagem não encontrada!">
+        <p>Quem foi Lino Villachá?</p>
+    </a>
+
+    <a href="Lara/Lara.html" class="box" target="_blank">
+        <img src="Lara/inclusivo.jpg" alt="Imagem não encontrada!">
+        <p>Que país é este?</p>
+    </a>
+
+    <a href="IdadeMedia/IdadeMedia.html" class="box" target="_blank">
+        <img src="IdadeMedia/capa.jpg.jfif" alt="Imagem não encontrada!">
+        <p>Costumes da Idade Média</p>
+    </a>
+
+    <a href="GAP/GAP.html" class="box" target="_blank">
+        <img src="GAP/capa.jpg" alt="Imagem não encontrada!">
+        <p>Entre bons genes e jeans para todos</p>
+    </a>
+
+    <a href="FakeNews/FakeNews.html" class="box" target="_blank">
+        <img src="FakeNews/images.jfif" alt="Imagem não encontrada!">
+        <p>Fake News</p>
+    </a>
+
+    <a href="RedesSociais/RedesSociais.html" class="box" target="_blank">
+        <img src="RedesSociais/fotojpg.jfif" alt="Imagem não encontrada!">
+        <p>Impacto das redes sociais</p>
+    </a>
+
+    <a href="CR7/CR7.html" class="box" target="_blank">
+        <img src="CR7/papaicris.jpg" alt="Imagem não encontrada!">
+        <p>CR7</p>
+    </a>
 </div>
 
-<!-- SCRIPT DO MENU -->
-<script>
-const menuToggle = document.getElementById('menu-toggle');
-const navbar = document.getElementById('navbar');
+<footer>
+    <p>E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
+</footer>
 
-menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-});
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        navbar.classList.toggle('active');
+    });
 </script>
 
 </body>
