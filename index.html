@@ -70,6 +70,54 @@
         color: #ff9800;
     }
 
+    /* ====== MENU HAMBÚRGUER ====== */
+    .hamburger {
+        display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 10;
+    }
+
+    .navbar ul {
+        display: flex; /* Mostra o menu como barra em telas grandes */
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block; /* Mostra o botão hambúrguer em telas pequenas */
+        }
+
+        .navbar ul {
+            display: none; /* Esconde o menu em telas pequenas */
+            flex-direction: column;
+            align-items: center;
+            background-color: #0606061a;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            left: 0;
+            z-index: 9;
+        }
+
+        .navbar ul.show {
+            display: flex; /* Mostra o menu quando o botão hambúrguer é clicado */
+        }
+
+        .navbar ul li {
+            margin: 10px 0;
+        }
+    }
+
     /* ====== CONTEÚDO ====== */
     .container {
         display: grid;
@@ -203,10 +251,11 @@
     <header>
         <img src="Logo.png" alt="Logo">
         <h1>Li no Villachá</h1>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </header>
 
     <nav class="navbar">
-        <ul>
+        <ul class="hidden">
             <li><a href="escola.html">SOBRE A ESCOLA</a></li>
             <li><a href="avisos.html">AVISOS IMPORTANTES</a></li>
             <li><a href="fotos.html">FOTOS</a></li>
@@ -280,5 +329,12 @@
         <p>E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
     </footer>
 </div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.navbar ul');
+        menu.classList.toggle('hidden');
+    }
+</script>
 </body>
 </html>
