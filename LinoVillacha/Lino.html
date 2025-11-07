@@ -7,19 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-    /* ======== CABEÇALHO ======== */
+    /* ======== PÁGINA DE FUNDO ========= */
     header {
         background: radial-gradient(rgb(1, 1, 34), 65%, rgb(19, 5, 220) 100%);
         color: white;
+        padding: 10px;
         text-align: center;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         font-family: 'Poppins', sans-serif;    
-        padding: 15px;
     }
     header img {
         max-height: 80px;
         vertical-align: middle;
-        margin-right: 20px;
+        margin-right: 30px;
     }
     header h1 {
         display: inline-block;
@@ -29,8 +29,6 @@
         font-weight: 600;
         letter-spacing: 1px;
     }
-
-    /* ======== RODAPÉ ======== */
     footer {
         background: rgb(9, 2, 112);
         color: white;
@@ -51,31 +49,29 @@
        font-family: 'Poppins', sans-serif; 
     }
 
-    /* ======== CONTEÚDO ======== */
+    /* ======== ESTILO DA PÁGINA ======== */
     body {
         margin: 0;
         padding: 0;
         background-color: beige;
-        font-family: 'Poppins', sans-serif;
     }
     .titulo {
         font-size: 40px;
         text-align: center;
         color: rgb(3, 3, 123);
-        margin: 25px 15px;
+        font-family: 'Poppins', sans-serif; 
+        margin: 20px 10px;
     }
     .borda {
         width: 93%;
-        margin: 0 auto;
+        height: auto;
+        margin: 5px auto;
     }
     .caixa {
         display: flex;
-        justify-content: space-between;
+        margin: 0px auto;
+        width: 1000px;
         align-items: flex-start;
-        gap: 20px;
-        max-width: 1000px;
-        margin: 20px auto;
-        flex-wrap: wrap;
     }
     .caixaTx {
         margin: 20px;
@@ -85,58 +81,46 @@
         font-size: 20px;
         text-indent: 70px;
         text-align: justify;
-        margin: 10px 0;
+        font-family: 'Poppins', sans-serif;
     }
     img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px;
+        margin-right: 50px;
     }
 
     /* ======== RESPONSIVIDADE ======== */
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
+        header img {
+            max-height: 60px;
+            margin-right: 10px;
+        }
+        header h1 {
+            font-size: 1.4rem;
+            display: block;
+            margin-top: 10px;
+        }
         .titulo {
-            font-size: 32px;
+            font-size: 28px;
         }
         .p2 {
             font-size: 18px;
-            text-indent: 50px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        header h1 {
-            font-size: 1.4rem;
-        }
-        .titulo {
-            font-size: 26px;
+            text-indent: 40px;
         }
         .caixa {
             flex-direction: column;
+            width: 95%;
             align-items: center;
         }
-        img {
-            margin: 0 auto 20px;
+        .caixa img {
+            width: 100%;
+            height: auto;
+            margin: 0 0 20px 0;
         }
-        .p2 {
-            font-size: 17px;
-            text-indent: 30px;
+        footer p {
+            font-size: 14px;
+            padding: 0 10px;
         }
     }
 
-    @media (max-width: 480px) {
-        .titulo {
-            font-size: 22px;
-        }
-        .p2 {
-            font-size: 16px;
-            text-indent: 20px;
-        }
-        header img {
-            max-height: 60px;
-            margin: 0 10px 10px 0;
-        }
-    }
 </style>
 </head>
 <body>
@@ -150,19 +134,20 @@
 
 <!-------- CONTEÚDO PÁGINA -------->    
 <h1 class="titulo">Quem foi Lino Villachá, responsável pelo nome da nossa escola?</h1>
+
 <div class="borda">
-    <p class="p2">A Escola Estadual Lino Villachá foi oficialmente nomeada em homenagem a Lino Villachá, um educador, escritor e poeta que se tornou símbolo de resistência, superação e amor à comunidade escolar.</p>
-    
-    <div class="caixa">
-        <img src="FT1.jpg" alt="Foto de Lino Villachá" width="420" height="300">
-        <p class="p2">Lino Villachá nasceu em 15 de agosto de 1938, em Terenos (MS). Aos 12 anos, foi diagnosticado com hanseníase e, por isso, mudou-se com a família para a antiga Colônia São Julião, localizada no bairro Nova Lima, em Campo Grande. Apesar das adversidades — que incluíram amputações das pernas e limitações nos movimentos das mãos —, Lino seguiu com imenso esforço e dedicação suas atividades como educador, poeta, cronista e escritor.</p>
-    </div>
+<p class="p2">A Escola Estadual Lino Villachá foi oficialmente nomeada em homenagem a Lino Villachá, um educador, escritor e poeta que se tornou símbolo de resistência, superação e amor à comunidade escolar.</p>
 
-    <p class="p2">Mesmo diante das limitações físicas, seguiu ensinando com afinco. Ele dirigiu a Escola Estadual Padre Franco Delpiano e dedicou-se também à escrita com grande coragem: no início, usava um lápis amarrado às mãos e, posteriormente, passou a utilizar um computador para compor seus textos. Sua produção literária teve repercussão tanto no Brasil quanto na Itália, por meio da publicação de seus livros. Além disso, trabalhou na secretaria do Hospital São Julião, contribuindo com dados e relatórios.</p>
+<div class="caixa">
+    <img src="FT1.jpg" alt="Foto de Lino Villachá" width="420" height="300">
+    <p class="p2">Lino Villachá nasceu em 15 de agosto de 1938, em Terenos (MS). Aos 12 anos, foi diagnosticado com hanseníase e, por isso, mudou-se com a família para a antiga Colônia São Julião, localizada no bairro Nova Lima, em Campo Grande. Apesar das adversidades — que incluíram amputações das pernas e limitações nos movimentos das mãos —, Lino seguiu com imenso esforço e dedicação suas atividades como educador, poeta, cronista e escritor.</p>
+</div>
 
-    <p class="p2">Lino Villachá se tornou um verdadeiro símbolo de superação e dedicação — usando sua literatura para dar voz às classes marginalizadas e deixando um legado inspirador de vida e luta. Por esses motivos, em 12 de maio de 1988, mediante o decreto nº 9.104 do governador Wilson Barbosa Martins, a já existente Escola Estadual de 1º e 2º Graus “Lino Villachá” passou a se chamar oficialmente Escola Estadual Lino Villachá, perpetuando sua memória e seus valores junto à comunidade educativa.</p>
+<p class="p2">Mesmo diante das limitações físicas, seguiu ensinando com afinco. Ele dirigiu a Escola Estadual Padre Franco Delpiano e dedicou-se também à escrita com grande coragem: no início, usava um lápis amarrado às mãos e, posteriormente, passou a utilizar um computador para compor seus textos. Sua produção literária teve repercussão tanto no Brasil quanto na Itália, por meio da publicação de seus livros. Além disso, trabalhou na secretaria do Hospital São Julião, contribuindo com dados e relatórios.</p>
 
-    <p align="right"><i>Fonte: Nova Lima News</i></p>
+<p class="p2">Lino Villachá se tornou um verdadeiro símbolo de superação e dedicação — usando sua literatura para dar voz às classes marginalizadas e deixando um legado inspirador de vida e luta. Por esses motivos, em 12 de maio de 1988, mediante o decreto nº 9.104 do governador Wilson Barbosa Martins, a já existente Escola Estadual de 1º e 2º Graus “Lino Villachá” passou a se chamar oficialmente Escola Estadual Lino Villachá, perpetuando sua memória e seus valores junto à comunidade educativa.</p>
+
+<p align="right">Fonte: Nova Lima News</p>
 </div>
 
 <!-------- CONTEÚDO RODAPÉ -------->
@@ -173,3 +158,4 @@
 
 </body>
 </html>
+
