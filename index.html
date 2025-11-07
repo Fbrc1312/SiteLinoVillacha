@@ -24,19 +24,41 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         font-family: 'Poppins', sans-serif;
         padding: 10px;
+        display: flex; /* Alinha os itens horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: space-between; /* Espaço entre os itens */
     }
+
     header img {
         max-height: 80px;
-        vertical-align: middle;
-        margin-right: 20px;
+        margin-right: 10px;
     }
+
     header h1 {
-        display: inline-block;
         font-size: 1.8rem;
-        vertical-align: middle;
         margin: 0;
         font-weight: 600;
         letter-spacing: 1px;
+        flex-grow: 1; /* Faz o título ocupar o espaço restante */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        header {
+            flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+        }
+
+        .hamburger {
+            display: block; /* Mostra o botão hambúrguer em telas pequenas */
+        }
     }
 
     /* ====== NAVEGAÇÃO ====== */
