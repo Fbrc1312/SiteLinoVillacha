@@ -20,18 +20,23 @@
     header {
         background: radial-gradient(rgb(1, 1, 34), 65%, rgb(19, 5, 220) 100%);
         color: white;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         font-family: 'Poppins', sans-serif;
-        padding: 10px;
+        padding: 10px 20px;
         display: flex; /* Alinha os itens horizontalmente */
         align-items: center; /* Centraliza verticalmente */
-        justify-content: space-between; /* Espaço entre os itens */
+        justify-content: center; /* Centraliza horizontalmente */
+        position: relative; /* Para posicionar o botão hambúrguer */
+    }
+
+    .header-content {
+        display: flex; /* Alinha logo e título lado a lado */
+        align-items: center; /* Centraliza verticalmente */
+        gap: 10px; /* Espaço entre o logo e o título */
     }
 
     header img {
         max-height: 80px;
-        margin-right: 10px;
     }
 
     header h1 {
@@ -39,25 +44,36 @@
         margin: 0;
         font-weight: 600;
         letter-spacing: 1px;
-        flex-grow: 1; /* Faz o título ocupar o espaço restante */
-        text-align: left; /* Alinha o texto à esquerda */
+        text-align: center;
     }
 
     .hamburger {
         display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
 
     @media (max-width: 768px) {
+        .hamburger {
+            display: block; /* Mostra o botão hambúrguer em telas pequenas */
+        }
+
         header {
-            flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+            justify-content: space-between; /* Ajusta o layout para telas pequenas */
+        }
+
+        .header-content {
+            justify-content: center; /* Mantém o logo e o título centralizados */
         }
 
         header h1 {
             font-size: 1.5rem;
-        }
-
-        .hamburger {
-            display: block; /* Mostra o botão hambúrguer em telas pequenas */
         }
     }
 
@@ -271,8 +287,10 @@
 <!-- CONTEÚDO PRINCIPAL -->
 <div id="conteudo">
     <header>
-        <img src="Logo.png" alt="Logo">
-        <h1>Li no Villachá</h1>
+        <div class="header-content">
+            <img src="Logo.png" alt="Logo">
+            <h1>Li no Villachá</h1>
+        </div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
     </header>
 
