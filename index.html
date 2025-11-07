@@ -23,21 +23,26 @@
         text-align: center;
         padding: 20px 10px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+        /* Mantém logo e título lado a lado */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 15px;
     }
 
     header img {
         max-height: 80px;
         vertical-align: middle;
-        margin-right: 15px;
     }
 
     header h1 {
-        display: inline-block;
         font-size: 1.8rem;
-        vertical-align: middle;
         margin: 0;
         font-weight: 600;
         letter-spacing: 1px;
+        white-space: nowrap;
     }
 
     /* ====== NAVEGAÇÃO ====== */
@@ -160,9 +165,15 @@
 
     /* ====== RESPONSIVIDADE ====== */
     @media (max-width: 768px) {
+        header {
+            padding: 15px 10px;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
+
         header img {
             max-height: 60px;
-            margin-right: 10px;
         }
 
         header h1 {
@@ -173,10 +184,6 @@
             flex-direction: column;
             align-items: center;
             gap: 8px;
-        }
-
-        .navbar ul li {
-            margin: 0;
         }
 
         .container {
@@ -201,17 +208,18 @@
 
     @media (max-width: 480px) {
         header {
-            padding: 15px 5px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
 
         header img {
-            max-height: 50px;
+            max-height: 45px;
         }
 
         header h1 {
-            display: block;
-            margin-top: 5px;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .container {
@@ -226,7 +234,6 @@
             font-size: 0.85rem;
         }
     }
-
 </style>
 </head>
 <body>
