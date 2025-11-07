@@ -7,20 +7,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-    /* ======== PÁGINA DE FUNDO ========= */
+    /* ======== ESTILO GERAL ======== */
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: beige;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* ======== CABEÇALHO ======== */
     header {
         background: radial-gradient(rgb(1, 1, 34), 65%, rgb(19, 5, 220) 100%);
         color: white;
         padding: 10px;
         text-align: center;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        font-family: 'Poppins', sans-serif;    
     }
+
     header img {
         max-height: 80px;
         vertical-align: middle;
         margin-right: 30px;
     }
+
     header h1 {
         display: inline-block;
         font-size: 1.8rem;
@@ -29,6 +38,53 @@
         font-weight: 600;
         letter-spacing: 1px;
     }
+
+    /* ======== CONTEÚDO ======== */
+    .titulo {
+        font-size: 40px;
+        text-align: center;
+        color: rgb(3, 3, 123);
+        margin: 25px 0;
+    }
+
+    .borda {
+        width: 93%;
+        height: auto;
+        margin: 5px auto;
+    }
+
+    .caixa {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 20px auto;
+        width: 1000px;
+        gap: 30px;
+    }
+
+    .caixa img {
+        width: 420px;
+        height: auto;
+        margin-right: 50px;
+    }
+
+    .caixaTx {
+        margin: 20px;
+        border: 3px solid black;
+    }
+
+    .p2 {
+        font-size: 20px;
+        text-indent: 70px;
+        text-align: justify;
+        margin: 15px 0;
+    }
+
+    .p1 {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* ======== RODAPÉ ======== */
     footer {
         background: rgb(9, 2, 112);
         color: white;
@@ -36,126 +92,123 @@
         padding: 15px;
         margin-top: 20px;
     }
+
     footer a {
         color: #ffca28;
         text-decoration: none;
         margin: 0 10px;
         font-weight: 500;
     }
+
     footer a:hover {
         text-decoration: underline;
     }
-    .p1 {
-       font-family: 'Poppins', sans-serif; 
-    }
-
-    /* ======== ESTILO DA PÁGINA ======== */
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: beige;
-    }
-    .titulo {
-        font-size: 40px;
-        text-align: center;
-        color: rgb(3, 3, 123);
-        font-family: 'Poppins', sans-serif; 
-        margin: 20px 10px;
-    }
-    .borda {
-        width: 93%;
-        height: auto;
-        margin: 5px auto;
-    }
-    .caixa {
-        display: flex;
-        margin: 0px auto;
-        width: 1000px;
-        align-items: flex-start;
-    }
-    .caixaTx {
-        margin: 20px;
-        border: 3px solid black;
-    }
-    .p2 {
-        font-size: 20px;
-        text-indent: 70px;
-        text-align: justify;
-        font-family: 'Poppins', sans-serif;
-    }
-    img {
-        margin-right: 50px;
-    }
 
     /* ======== RESPONSIVIDADE ======== */
-    @media (max-width: 768px) {
+    @media (max-width: 1020px) {
+        .caixa {
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 900px) {
         header img {
-            max-height: 60px;
-            margin-right: 10px;
-        }
-        header h1 {
-            font-size: 1.4rem;
             display: block;
-            margin-top: 10px;
+            margin: 0 auto 10px;
         }
+
+        header h1 {
+            display: block;
+            font-size: 1.6rem;
+        }
+
         .titulo {
-            font-size: 28px;
+            font-size: 32px;
         }
+
         .p2 {
-            font-size: 18px;
-            text-indent: 40px;
+            font-size: 22px;
+            text-indent: 50px;
         }
+
         .caixa {
             flex-direction: column;
-            width: 95%;
             align-items: center;
-        }
-        .caixa img {
             width: 100%;
+        }
+
+        .caixa img {
+            width: 90%;
             height: auto;
             margin: 0 0 20px 0;
         }
-        footer p {
-            font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+        .titulo {
+            font-size: 26px;
+            margin: 15px;
+        }
+
+        .p2 {
+            font-size: 18px;
+            text-indent: 30px;
             padding: 0 10px;
+        }
+
+        footer {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        header h1 {
+            font-size: 1.4rem;
         }
     }
 
+    @media (max-width: 400px) {
+        .titulo {
+            font-size: 22px;
+        }
+
+        .p2 {
+            font-size: 16px;
+        }
+    }
 </style>
 </head>
 <body>
 
-<!-------- CONTEÚDO CABEÇALHO -------->
-<div id="conteudo">
-    <header>
-        <img src="../Logo.png" alt="Logo da Escola">
-        <h1>Lino Villachá</h1>
-    </header>
+<!-------- CABEÇALHO -------->
+<header>
+    <img src="../Logo.png" alt="Logo da Escola">
+    <h1>Lino Villachá</h1>
+</header>
 
-<!-------- CONTEÚDO PÁGINA -------->    
+<!-------- CONTEÚDO PRINCIPAL -------->
 <h1 class="titulo">Quem foi Lino Villachá, responsável pelo nome da nossa escola?</h1>
 
 <div class="borda">
-<p class="p2">A Escola Estadual Lino Villachá foi oficialmente nomeada em homenagem a Lino Villachá, um educador, escritor e poeta que se tornou símbolo de resistência, superação e amor à comunidade escolar.</p>
+    <p class="p2">A Escola Estadual Lino Villachá foi oficialmente nomeada em homenagem a Lino Villachá, um educador, escritor e poeta que se tornou símbolo de resistência, superação e amor à comunidade escolar.</p>
 
-<div class="caixa">
-    <img src="FT1.jpg" alt="Foto de Lino Villachá" width="420" height="300">
-    <p class="p2">Lino Villachá nasceu em 15 de agosto de 1938, em Terenos (MS). Aos 12 anos, foi diagnosticado com hanseníase e, por isso, mudou-se com a família para a antiga Colônia São Julião, localizada no bairro Nova Lima, em Campo Grande. Apesar das adversidades — que incluíram amputações das pernas e limitações nos movimentos das mãos —, Lino seguiu com imenso esforço e dedicação suas atividades como educador, poeta, cronista e escritor.</p>
+    <div class="caixa">
+        <img src="FT1.jpg" alt="Foto de Lino Villachá">
+        <p class="p2">Lino Villachá nasceu em 15 de agosto de 1938, em Terenos (MS). Aos 12 anos, foi diagnosticado com hanseníase e, por isso, mudou-se com a família para a antiga Colônia São Julião, localizada no bairro Nova Lima, em Campo Grande. Apesar das adversidades — que incluíram amputações das pernas e limitações nos movimentos das mãos —, Lino seguiu com imenso esforço e dedicação suas atividades como educador, poeta, cronista e escritor.</p>
+    </div>
+
+    <p class="p2">Mesmo diante das limitações físicas, seguiu ensinando com afinco. Ele dirigiu a Escola Estadual Padre Franco Delpiano e dedicou-se também à escrita com grande coragem: no início, usava um lápis amarrado às mãos e, posteriormente, passou a utilizar um computador para compor seus textos. Sua produção literária teve repercussão tanto no Brasil quanto na Itália, por meio da publicação de seus livros. Além disso, trabalhou na secretaria do Hospital São Julião, contribuindo com dados e relatórios.</p>
+
+    <p class="p2">Lino Villachá se tornou um verdadeiro símbolo de superação e dedicação — usando sua literatura para dar voz às classes marginalizadas e deixando um legado inspirador de vida e luta. Por esses motivos, em 12 de maio de 1988, mediante o decreto nº 9.104 do governador Wilson Barbosa Martins, a já existente Escola Estadual de 1º e 2º Graus “Lino Villachá” passou a se chamar oficialmente Escola Estadual Lino Villachá, perpetuando sua memória e seus valores junto à comunidade educativa.</p>
+
+    <p align="right">Fonte: Nova Lima News</p>
 </div>
 
-<p class="p2">Mesmo diante das limitações físicas, seguiu ensinando com afinco. Ele dirigiu a Escola Estadual Padre Franco Delpiano e dedicou-se também à escrita com grande coragem: no início, usava um lápis amarrado às mãos e, posteriormente, passou a utilizar um computador para compor seus textos. Sua produção literária teve repercussão tanto no Brasil quanto na Itália, por meio da publicação de seus livros. Além disso, trabalhou na secretaria do Hospital São Julião, contribuindo com dados e relatórios.</p>
-
-<p class="p2">Lino Villachá se tornou um verdadeiro símbolo de superação e dedicação — usando sua literatura para dar voz às classes marginalizadas e deixando um legado inspirador de vida e luta. Por esses motivos, em 12 de maio de 1988, mediante o decreto nº 9.104 do governador Wilson Barbosa Martins, a já existente Escola Estadual de 1º e 2º Graus “Lino Villachá” passou a se chamar oficialmente Escola Estadual Lino Villachá, perpetuando sua memória e seus valores junto à comunidade educativa.</p>
-
-<p align="right">Fonte: Nova Lima News</p>
-</div>
-
-<!-------- CONTEÚDO RODAPÉ -------->
+<!-------- RODAPÉ -------->
 <footer>
-   <p class="p1">E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
+    <p class="p1">E. E. Lino Villachá | R. Jerônimo de Albuquerque, 1941 - Nova Lima, Campo Grande - MS, 79017-065</p>
 </footer>
-</div>
 
 </body>
 </html>
+
 
